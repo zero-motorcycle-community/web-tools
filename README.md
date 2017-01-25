@@ -20,6 +20,9 @@ Web based data tools for Zero Motorcycles
  - / root folder - contains index page for access to all tools, contains the wrapper for the log parser, 
    the log analyzer, related web files, and the downloadable .xls file.
 
+* Some files may require adjustment to folder paths based on where it's placed on the web server.
+Current design is that all web files reside in a folder on the server called "/zerologparser/"
+
 ##Log Parser Wrapper
 This function allows uploading a downloaded Zero motorcycle log file (.bin) to the server,
 which will then run the Python parsing script against the log file and return the text version.
