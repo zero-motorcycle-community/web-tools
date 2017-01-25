@@ -1,5 +1,11 @@
 <?php
 
+/*
+The data for the VIN decoding is contained within the 1 and 2-dimensional arrays
+within each decode_[field] function.  Most of them are organized by year.
+Each year the new codes must be appended to each function.
+*/
+
 function decode_vin($zvin){
 	$error = 0;
 
