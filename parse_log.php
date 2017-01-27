@@ -17,9 +17,7 @@ $parse_file = substr($log_file, 0, -4) . '.txt';
 
 
 // run parser *REQUIRES PYTHON 2.7* - will overwrite any existing file
-//$result = exec('/usr/bin/python ./python/zero_log_parser.py ' . $log_file);
-//header entry byte fix:
-$result = exec('/usr/bin/python ./python/zero_log_parser_header_fix.py ' . $log_file);
+$result = exec('/usr/bin/python ./python/zero_log_parser.py ' . $log_file);
 
 
 /* SAVING BIN FILES FOR NOW, UNCOMMENT TO DELETE AFTER PROCESSING
