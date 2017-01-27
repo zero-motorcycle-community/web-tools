@@ -22,8 +22,8 @@
 <br />
 
 <div>
-	* using Kim Burgess' zero-log-parser script<br />
-	<a href="https://github.com/KimBurgess/zero-log-parser">https://github.com/KimBurgess/zero-log-parser</a><br />
+	* using the Zero-Motorcycle-Community zero-log-parser script<br />
+	<a href="https://github.com/zero-motorcycle-community">https://github.com/zero-motorcycle-community</a><br />
 	<a href="./python/README.md">README</a><br />
 	<br /><br />
 	<img src="./images/send-zero-logs.jpg" alt="Zero Motorcycles App screenshot" title="Use the app to download your bike logs" /><br />
