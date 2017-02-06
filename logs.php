@@ -38,8 +38,11 @@ $z = 0;
 // loop through folder, glob() returns alphabetical listing
 foreach (glob("./logs/*.txt") as $filename) {
 	
-	// get current VIN from file
+	// get current VIN from file (first 17 characters of file name - NOT NECESSARILY A VIN)
 	$vin = substr($filename, 7, 17);
+	
+	// if filename is shorter than 21 characters, the extension could be included in $vin.  Eliminate this.
+	$vin = str_replace('.txt', '', $vin);  // TODO still an issue if filename is 17-20 characters
 	
 	// detect new vin from list (compare first 17 chars of file name)
 	if ( $vin != $lastvin ) {
@@ -85,8 +88,11 @@ foreach (glob("./logs/*.txt") as $filename) {
 		} //while
 		fclose($myfile);
 		
+		// count total parsed txt files for vin (by root filename)
+		$filecount = count( glob("./logs/*$vin*.txt") );
+		
 		// Check for successful header parse
-		if ( $zsuccess <> 'Printing' ) {
+		if ( $zsuccess <> 'Printing' or strlen($zvin) <> 17 ) {
 			// bad header, have no data about bike other than year from VIN in filename
 			$zvin = $vin;  // try to glean VIN from filename because not found in header
 			// clear out old/bad log lookup data
@@ -96,9 +102,7 @@ foreach (glob("./logs/*.txt") as $filename) {
 			$zfirm = '--';
 		}
 		
-		// count total parsed files for vin
-		$filecount = count( glob("./logs/*$zvin*.txt") );
-		
+		// run vin decoder
 		$dvin = decode_vin($zvin);
 		
 		if ( $dvin == '' ) {
