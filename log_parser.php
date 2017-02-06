@@ -10,19 +10,20 @@
 
 <div class="divbox">
 	<form action="./upload.php" method="post" enctype="multipart/form-data">
-		Select Zero Motorcycles MBB log file to upload:<br />
-		<em>(538VIN_MBB_YYYY-MM-DD.bin)</em><br />
+		Select Zero Motorcycles MBB or BMS* log file to upload:<br />
+		<em>(538VIN_MBB/BMS_YYYY-MM-DD.bin)</em><br />
 		<br />
 		1) <input type="file" name="fileToUpload" id="fileToUpload" /><br />
 		<br />
 		2) <input type="submit" value="Upload & Parse" name="submit" />
-	</form>
+	</form><br />
+	<em>* Note that BMS files are still a work-in-progress, and many codes currently won't decode to text.</em>
 </div>
 
 <br />
 
 <div>
-	* using the Zero-Motorcycle-Community zero-log-parser script<br />
+	Uses the Zero-Motorcycle-Community zero-log-parser script<br />
 	<a href="https://github.com/zero-motorcycle-community">https://github.com/zero-motorcycle-community</a><br />
 	<a href="./python/README.md">README</a><br />
 	<br /><br />

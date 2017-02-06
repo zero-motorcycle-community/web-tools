@@ -12,7 +12,7 @@
 	<b>Here are some tools you might find useful.</b><br />
 	<br />
 	<a href="./log_parser.php">Zero Motorcycles Online Log File Parser</a><br />
-	This utility will take a Main Bike Board (MBB) log file downloaded from the mobile app and parse it into a human-readable format.
+	This utility will take a Main Bike Board (MBB) or Battery Management System (BMS) log file downloaded from the mobile app and parse it into a human-readable format.
 	Probably what you came here for.<br />
 	<br />
 	<a href="./zero-log-plot.xls">Zero Motorcycles Log Plotter Spreadsheet (.XLS)</a><br />
