@@ -35,6 +35,9 @@ which will then run the Python parsing script against the log file and return th
 ## Log Analyzer
 Uploaded log files are stored on the server and summarized for basic motorcycle information.
 
+## Firmware Summary
+Uploaded log files are summarized for latest firmware information by model and year.
+
 ## VIN Decoder
 A VIN decoder specfically for Zero Motorcycles VINs, based on information about the VIN
 published by Zero in the various [Owner's Manuals](http://www.zeromotorcycles.com/owner-resources/).
