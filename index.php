@@ -22,6 +22,9 @@
 	<a href="./logs.php">Zero Motorcycles Log File Summary Data</a><br />
 	This is a summary of all successfully parsed log files that have been submitted to the log file parser so far.<br />
 	<br />
+	<a href="./firmware-summary.php">Latest Firmwares</a><br />
+	This is the latest firmwares per model & year, based on the log data captured so far.<br />
+	<br />
 	<a href="./vindecoder/">Zero Motorcycles VIN Decoder</a><br />
 	Use this utility to decode your Zero Motorcycles VIN number to useful information.<br />
 	<br />
