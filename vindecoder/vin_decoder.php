@@ -145,6 +145,13 @@ function decode_model($zmodel){
 	$zmodels['2017']['G'] = 'SR/DSR/DSRP';
 	$zmodels['2017']['H'] = 'FXP';
 	$zmodels['2017']['J'] = 'FXS';
+	//2018
+	$zmodels['2018']['A'] = 'S/SP';
+	$zmodels['2018']['B'] = 'DS/DSP';
+	$zmodels['2018']['G'] = 'SR/DSR/DSRP';
+	$zmodels['2018']['C'] = 'FX';
+	$zmodels['2018']['H'] = 'FXP';
+	$zmodels['2018']['J'] = 'FXS';
 	
 	return $zmodels["$zyear"]["$zmodel"];
 }
@@ -212,6 +219,12 @@ function decode_line($zline){
 	$zlines['2017']['DA'] = 'DS 6.5';
 	$zlines['2017']['DB'] = 'DS/DSR/DSP/DSRP 13.0';
 	$zlines['2017']['XB'] = 'FX/FXS/FXP';
+	//2018
+	$zlines['2018']['ME'] = 'S/SP 7.2';
+	$zlines['2018']['MF'] = 'S/SR/SP/SRP 13.0/14.4';
+	$zlines['2018']['DC'] = 'DS 7.2';
+	$zlines['2018']['DD'] = 'DS/DSR/DSP/DSRP 14.4';
+	$zlines['2018']['XC'] = 'FX/FXS/FXP';
 	
 	return $zlines["$zyear"]["$zline"];
 }
@@ -249,6 +262,9 @@ function decode_type($ztype){
 	//2017
 	$ztypes['2017']['S'] = 'S/SR/DS/DSR Platform';
 	$ztypes['2017']['X'] = 'X Platform';
+	//2018
+	$ztypes['2018']['S'] = 'S/SR/DS/DSR Platform';
+	$ztypes['2018']['X'] = 'X Platform';
 	
 	return $ztypes["$zyear"]["$ztype"];
 }
@@ -323,6 +339,14 @@ function decode_color($zmodel){
 	$zcolors['2017']['G'] = 'Red (SR), or Black (DSR)'; //'SR/DSR/DSRP'
 	$zcolors['2017']['H'] = 'Black or White'; //'FXP'
 	$zcolors['2017']['J'] = 'Black'; //'FXS'
+	//2018
+	$zcolors['2018']['A'] = 'Silver'; //'S/SP'
+	$zcolors['2018']['B'] = 'Green'; //'DS/DSP'
+	$zcolors['2018']['C'] = 'White'; //'FX'
+	$zcolors['2018']['G'] = 'White (SR), or Black (DSR)'; //'SR/DSR/DSRP'
+	$zcolors['2018']['H'] = 'Black or White'; //'FXP'
+	$zcolors['2018']['J'] = 'Black'; //'FXS'
+
 	
 	return $zcolors["$zyear"]["$zmodel"];
 }
