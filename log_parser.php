@@ -3,6 +3,7 @@
 <head>
 	<title>Zero Motorcycles Online Log File Parser</title>
 	<link rel="stylesheet" type="text/css" href="style.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 
@@ -28,7 +29,7 @@
 	<a href="./python/README.md">README</a><br />
 	<br /><br />
 	<img src="./images/send-zero-logs.jpg" alt="Zero Motorcycles App screenshot" title="Use the app to download your bike logs" /><br />
-	<a href="http://www.zeromotorcycles.com/technology/#app">Download the app</a>
+	<a href="http://www.zeromotorcycles.com/technology/#download-app-links">Download the app</a>
 </div>
 
 <br />
