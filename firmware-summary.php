@@ -3,6 +3,7 @@
 <head>
 	<title>Latest Firmwares Found</title>
 	<link rel="stylesheet" type="text/css" href="style.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style type="text/css">
 		body{
 			font-family: Consolas, Lucida Console, Courier;
