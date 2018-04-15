@@ -8,9 +8,9 @@ Web-based data tools for Zero Motorcycles.
  * Access to spreadsheets able to analyze a given log
 
 ## Web server must:
- * Run PHP
- * Have Python 2.7 installed
- * Allow uploads to `/logs/` directory
+ * Run PHP  (7.0 preferred)
+ * Have Python 2.7 installed (script does NOT work on Python3)
+ * Allow file uploads to `/logs/` directory
 
 ## Web folder structure
  * `/` root folder
@@ -21,7 +21,7 @@ Web-based data tools for Zero Motorcycles.
  * `/logs/`
    * Where both uploaded `.bin` files are stored, as well as the parsed `.txt` versions of the same
  * `/vindecoder/`
-   * Files specifically related to the VIN decoder
+   * Files specifically related to the VIN decoder (log parser depends on this)
  * `/python/`
    * Should contain the most current version of the [Python zero-log-parser](https://github.com/zero-motorcycle-community/zero-log-parser)
 
