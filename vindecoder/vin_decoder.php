@@ -368,7 +368,7 @@ function validate_vin($vin) {
 	$vin = strtolower($vin);
 	if (!preg_match('/^[^\ioq]{17}$/', $vin)) { 
 		// not valid if not 17 characters or has I, O, or Q in VIN
-		return false;
+		return 'false - check VIN';
 	}
 	$weights = array(8, 7, 6, 5, 4, 3, 2, 10, 0, 9, 8, 7, 6, 5, 4, 3, 2);
 	$transliterations = array(
