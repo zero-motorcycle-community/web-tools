@@ -152,6 +152,15 @@ function decode_model($zmodel){
 	$zmodels['2018']['C'] = 'FX';
 	$zmodels['2018']['H'] = 'FXP';
 	$zmodels['2018']['J'] = 'FXS';
+	//2019
+	$zmodels['2019']['A'] = 'S';
+	$zmodels['2019']['B'] = 'DS';
+	$zmodels['2019']['G'] = 'SR/DSR/DSRP';
+	$zmodels['2019']['C'] = 'FX';
+	$zmodels['2019']['H'] = 'FXP';
+	$zmodels['2019']['J'] = 'FXS';
+	//2020
+	$zmodels['2020']['K'] = 'SR/F';
 	
 	return $zmodels["$zyear"]["$zmodel"];
 }
@@ -225,6 +234,17 @@ function decode_line($zline){
 	$zlines['2018']['DC'] = 'DS 7.2';
 	$zlines['2018']['DD'] = 'DS/DSR/DSP/DSRP 14.4';
 	$zlines['2018']['XC'] = 'FX/FXS/FXP';
+	//2019
+	$zlines['2019']['MF'] = 'S/SR 14.4';
+	$zlines['2019']['MH'] = 'S 7.2';
+	$zlines['2019']['DD'] = 'DS/DSR 14.4';
+	$zlines['2019']['DF'] = 'DS 7.2';
+	$zlines['2019']['MK'] = 'S 14.4';
+	$zlines['2019']['DH'] = 'DS 14.4';
+	$zlines['2019']['XC'] = 'FX/FXS/FXP';
+	//2020
+	$zlines['2020']['FA'] = 'SR/F';
+	
 	
 	return $zlines["$zyear"]["$zline"];
 }
@@ -242,29 +262,35 @@ function decode_type($ztype){
 	$ztypes['2010']['S'] = 'Street';
 	$ztypes['2010']['C'] = 'Commuter';
 	//2011
-	$ztypes['2011']['S'] = 'S/DS Platform';
-	$ztypes['2011']['X'] = 'X/MX Platform';
+	$ztypes['2011']['S'] = 'SDS Platform';
+	$ztypes['2011']['X'] = 'X Platform';
 	//2012
-	$ztypes['2012']['S'] = 'S/DS Platform';
-	$ztypes['2012']['X'] = 'X/MX Platform';
+	$ztypes['2012']['S'] = 'SDS Platform';
+	$ztypes['2012']['X'] = 'X Platform';
 	//2013
-	$ztypes['2013']['S'] = 'S/DS Platform';
-	$ztypes['2013']['X'] = 'X/MX Platform';
+	$ztypes['2013']['S'] = 'SDS Platform';
+	$ztypes['2013']['X'] = 'X Platform';
 	//2014
-	$ztypes['2014']['S'] = 'S/SR/DS Platform';
+	$ztypes['2014']['S'] = 'SDS Platform';
 	$ztypes['2014']['X'] = 'X Platform';
 	//2015
-	$ztypes['2015']['S'] = 'S/SR/DS Platform';
+	$ztypes['2015']['S'] = 'SDS Platform';
 	$ztypes['2015']['X'] = 'X Platform';
 	//2016
-	$ztypes['2016']['S'] = 'S/SR/DS/DSR Platform';
+	$ztypes['2016']['S'] = 'SDS Platform';
 	$ztypes['2016']['X'] = 'X Platform';
 	//2017
-	$ztypes['2017']['S'] = 'S/SR/DS/DSR Platform';
+	$ztypes['2017']['S'] = 'SDS Platform';
 	$ztypes['2017']['X'] = 'X Platform';
 	//2018
-	$ztypes['2018']['S'] = 'S/SR/DS/DSR Platform';
+	$ztypes['2018']['S'] = 'SDS Platform';
 	$ztypes['2018']['X'] = 'X Platform';
+	//2019
+	$ztypes['2019']['S'] = 'SDS Platform';
+	$ztypes['2019']['X'] = 'X Platform';
+	//2020
+	$ztypes['2020']['Z'] = 'Z4 - FST Platform';
+	
 	
 	return $ztypes["$zyear"]["$ztype"];
 }
@@ -276,6 +302,7 @@ function decode_hp($zhp){
 	}
 	
 	// HP codes seem unique across years, only single dimensional array needed, year not needed
+	// Codes may actually vary between platforms (SDS vs X), not accounted for yet
 	
 	$zhps['05'] = '0 - 50 hp';
 	$zhps['51'] = '50 - 100 hp';
@@ -290,7 +317,8 @@ function decode_hp($zhp){
 	$zhps['Z3'] = '16kw 75-7R';
 	$zhps['Z4'] = '17kW 75-5';
 	$zhps['Z5'] = '21kW 75-7';
-	$zhps['Z6'] = '21kw 75-7R';
+	$zhps['Z6'] = '22kw 75-7R';
+	$zhps['Z7'] = '40kw (54 HP)';
 	
 	return $zhps["$zhp"];
 }
@@ -346,8 +374,16 @@ function decode_color($zmodel){
 	$zcolors['2018']['G'] = 'White (SR), or Black (DSR)'; //'SR/DSR/DSRP'
 	$zcolors['2018']['H'] = 'Black or White'; //'FXP'
 	$zcolors['2018']['J'] = 'Black'; //'FXS'
+	//2019
+	$zcolors['2019']['A'] = 'Black'; //'S'
+	$zcolors['2019']['B'] = 'Sandstone'; //'DS'
+	$zcolors['2019']['C'] = 'Dune'; //'FX'
+	$zcolors['2019']['G'] = 'Black (SR), or Caldera (DSR)'; //'SR/DSR/DSRP'
+	$zcolors['2019']['H'] = 'Black or White'; //'FXP'
+	$zcolors['2019']['J'] = 'Rhino Gray'; //'FXS'
+	//2020
+	$zcolors['2020']['K'] = 'Seabright Blue or Boardwalk Red'; //'SR/F'
 
-	
 	return $zcolors["$zyear"]["$zmodel"];
 }
 
@@ -358,7 +394,7 @@ function decode_plant($zplant){
 	}
 	
 	// there's only one, for now.
-	$plants['C'] = 'California, Scotts Valley';
+	$plants['C'] = 'Scotts Valley, CA, USA';
 	
 	return $plants[$zplant];
 }
@@ -368,7 +404,7 @@ function validate_vin($vin) {
 	$vin = strtolower($vin);
 	if (!preg_match('/^[^\ioq]{17}$/', $vin)) { 
 		// not valid if not 17 characters or has I, O, or Q in VIN
-		return 'false - check VIN';
+		return "false - check VIN";
 	}
 	$weights = array(8, 7, 6, 5, 4, 3, 2, 10, 0, 9, 8, 7, 6, 5, 4, 3, 2);
 	$transliterations = array(
@@ -393,6 +429,7 @@ function validate_vin($vin) {
 
 	//will return true or false, based on if calculated check digit matches 9th digit of VIN
 	return var_export($checkdigit == $vin{8}, true);
+	
 }
 
 ?>
